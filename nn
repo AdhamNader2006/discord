@@ -1,0 +1,9 @@
+npm install discord.js
+client.on('messageCreate', message => {
+  if (message.author.bot) return;
+  if (message.channel.id == "channel id"){
+    const anchannel = client.channels.cache.get("ايدي الاتشانل التانيه")
+    let args = message.content.split(' ').slice(0).join(' ')
+    anchannel.send(`**${args /*دا الكلام اللي اتكتب ف الاشتانل*/} هنا الكلام اللي انت عايزه ثابت**`)
+  }
+})
